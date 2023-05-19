@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  background-image: url(../img/sebastian-svenson-LpbyDENbQQg-unsplash.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.header__texto--parrafo {
+  margin: 3rem 0;
+}
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.text-center {
+  text-align: center;
+  padding-top: 15rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+p {
+  font-size: 1.2rem;
+}
+.img-tienda {
+  opacity: 50%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video {
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
+  position: relative;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+.contenido-video {
+  z-index: 1;
+  text-align: center;
+}
+
+.brand {
+  font-size: 2rem;
+  color: white;
+  text-transform: capitalize;
+}
+.boton__primario {
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  box-shadow: 10px 10px 21px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 21px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 21px -9px rgba(0, 0, 0, 0.75);
+}
+
+/* PRODUCTOS - TIENDA */
+
+.listaproductos div {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .listaproductos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: auto;
+  }
+}
+
+/* COMPRAS */

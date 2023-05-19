@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Minimal Store - Comprar</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <p class="brand">MinimalStore</p></a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../index.html"
+                    >Inicio</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <h1 class="no-margin text-center">
+          Bienvenidos a la tienda de Minimal Store
+        </h1>
+      </div>
+    </header>
+    <main>
+      <section class="container productos">
+        <div class="listaproductos">
+          <div class="productos">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../img/Ropa/clement-vatte-o5-3txB1M3w-unsplash.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Combo: Remerukis</h5>
+                <p class="card-text">
+                  Este comobo incluye dos remeras oversize negras marca "Ribers"
+                </p>
+
+                <button onclick="carrito('Combo 1', 1000)">
+                  Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="productos">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../img/Ropa/hamza-nouasria-owpsBDBK5nY-unsplash.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Combo: Completo</h5>
+                <p class="card-text">
+                  El combo completo incluye una remera y un jean marca "Calvo
+                  Clint"
+                </p>
+
+                <button onclick="carrito('Combo 2', 2000)">
+                  Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="productos">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../img/Ropa/daniel-koponyas-5vBeVgdPP7w-unsplash.webp"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Combo: Completo + 1</h5>
+                <p class="card-text">
+                  Este combo incluye un jean mom , una remera y un piluso de
+                  regalo.
+                </p>
+
+                <button onclick="carrito('Combo 3', 3000)">
+                  Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="productos">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../img/Ropa/ns-37rVmK3jY-c-unsplash.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Combo: Completo x2</h5>
+                <p class="card-text">
+                  Este combo incluye dos jean y dos remeras
+                </p>
+                <button onclick="carrito('Combo 4', 4000)">
+                  Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="productos">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../img/Ropa/joshua-rondeau-ZCLAQEPf4Zc-unsplash.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Combo: Aesthetic</h5>
+                <p class="card-text">
+                  Este combo incluye una campera gastada y un par de zapatillas
+                  "Conversemos"
+                </p>
+
+                <button onclick="carrito('Combo 5', 5000)">
+                  Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin lista de productos -->
+      </section>
+      <section class="container">
+        <h2>Carrito de Compras</h2>
+        <ul id="productosAgregados"></ul>
+        <p id="total">Total: $0.00</p>
+        <button onclick="comprar()">Comprar</button>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
